@@ -9,6 +9,20 @@ class Animal {
   }
 }
 
+class Ular extends Animal {
+  constructor(name, legs, blood, reproduction) {
+    super(name, legs, blood)
+    this.reproduction = reproduction
+  }
+}
+
+class Kijang extends Animal {
+  constructor(name, legs, blood, hornCount) {
+    super(name, legs, blood)
+    this.hornCount = hornCount
+  }
+}
+
 class SuperPower {
   constructor (name, legs) {
     this.name = name
@@ -44,8 +58,8 @@ class SuperPower {
   }
 }
 
-let ular = new Animal('ular', 0, false)
-let kijang = new Animal('kijang', 4, true)
+let ular = new Ular('ular', 0, false, 'Ovo')
+let kijang = new Kijang('kijang', 4, true, 5)
 ular.superPower.mightNeck()
 kijang.superPower.superKick()
 
