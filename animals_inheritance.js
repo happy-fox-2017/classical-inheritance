@@ -43,38 +43,40 @@ class Animal {
 
 
 class SuperPower {
+  constructor(name) {
+    this.name = name;
+  }
   firaga() {
-    return console.log(`Attack using Firaga, a fire-based attack.`);
+    return console.log(`${this.name} use Firaga, a fire-based attack.`);
   }
 
   aero() {
-    return console.log(`Attack using Aero, a wind-based attack.`);
+    return console.log(`${this.name} use Aero, a wind-based attack.`);
   }
 
   stone() {
-    return console.log(`Attack using Stone, an earth-elemental attack.`);
+    return console.log(`${this.name} use Stone, an earth-elemental attack.`);
   }
 } // ----- end of SuperPower -----
-
 
 class Fox extends Animal {
   constructor(name, legs, diet, types, power) {
     super(name, legs, diet, types);
-    this.power = new SuperPower()
+    this.power = new SuperPower(name)
   }
 }
 
 class Turtle extends Animal {
   constructor(name, legs, diet, types, power) {
     super(name, legs, diet, types);
-    this.power = new SuperPower()
+    this.power = new SuperPower(name)
   }
 }
 
 class Butterfly extends Animal {
   constructor(name, legs, diet, types, power) {
     super(name, legs, diet, types);
-    this.power = new SuperPower()
+    this.power = new SuperPower(name)
   }
 }
 
